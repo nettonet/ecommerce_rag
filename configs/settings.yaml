@@ -1,0 +1,23 @@
+# 数据路径
+data_path: ./data/documents
+image_path: ./data/images
+embeddings_path: ./data/embeddings
+
+# 模型路径（需替换为实际权重路径）
+text_embedding_model: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+image_embedding_model: openai/clip-vit-base-patch32
+
+# Elasticsearch配置
+es_hosts: ["https://localhost:9200"]
+es_username: elastic
+es_password: elastic
+es_ca_certs: ./certs/http_ca.crt
+index_name: rag_ecommerce_index
+
+# 系统参数
+chunk_size: 512
+chunk_overlap: 128
+batch_size: 50
+
+DEFAULT_SYSTEM_PROMPT: "你是电商客服助手，负责回答商品相关问题，需优先使用检索到的信息"
+MAX_PROMPT_LENGTH: 4096  # 最大提示词长度（根据模型限制设置）
