@@ -1,0 +1,9 @@
+elasticsearch==8.11.2
+transformers==4.35.2
+sentence-transformers==2.2.2
+torch==2.1.0
+torchvision==0.16.0
+Pillow==10.0.1
+python-dotenv==1.0.0
+flask==2.3.3
+numpy==1.26.0
